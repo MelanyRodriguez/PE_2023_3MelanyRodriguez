@@ -31,7 +31,7 @@ namespace PE_2023_3MelanyRodriguez.Formularios
             LimpiarForm();
             CargarTiposdeVenta();
         }
-        
+
         private void CargarTiposdeVenta()
         {
             DataTable dtTiposVenta = new DataTable();
@@ -43,11 +43,11 @@ namespace PE_2023_3MelanyRodriguez.Formularios
             CboxVentaTipo.SelectedIndex = -1;
         }
 
-        private void LimpiarForm ()
+        private void LimpiarForm()
         {
             TxtNombreProovedor.Clear();
             TxtNumeroVenta.Clear();
-            TxtTotal.Text="0";
+            TxtTotal.Text = "0";
             TxtTotalCantidad.Text = "0";
             CboxVentaTipo.SelectedIndex = -1;
 
@@ -71,7 +71,7 @@ namespace PE_2023_3MelanyRodriguez.Formularios
 
             DialogResult respuesta = FormBusquedaProovedor.ShowDialog();
 
-            if (respuesta== DialogResult.OK)
+            if (respuesta == DialogResult.OK)
             {
                 //usamos las compociciones a proovedor para extraer el valor 
                 // del nombre del proovedor
@@ -82,11 +82,11 @@ namespace PE_2023_3MelanyRodriguez.Formularios
 
         private void BtnProductoAgregar_Click(object sender, EventArgs e)
         {
-          Form MiFormBusquedaItem= new FrmVentaAgregarProducto();
+            Form MiFormBusquedaItem = new FrmVentaAgregarProducto();
 
             DialogResult respuesta = MiFormBusquedaItem.ShowDialog();
 
-            if (respuesta== DialogResult.OK)
+            if (respuesta == DialogResult.OK)
             {
                 DgLista.DataSource = ListaProductos;
 
@@ -105,16 +105,16 @@ namespace PE_2023_3MelanyRodriguez.Formularios
                 decimal totalItems = 0;
                 decimal totalMonto = 0;
 
-              foreach(DataRow row in ListaProductos.Rows)
+                foreach (DataRow row in ListaProductos.Rows)
                 {
                     totalItems += Convert.ToDecimal(row["Cantidad"]);
                     //TotalItems= TotalItems+ algo
                     totalMonto += Convert.ToDecimal(row["PrecioUnitario"]) * Convert.ToDecimal(row["Cantidad"]);
                 }
 
-                  TxtTotalCantidad.Text = totalItems.ToString();
+                TxtTotalCantidad.Text = totalItems.ToString();
                 //este formato sirve para representar un valor monetario
-                TxtTotal.Text = string.Format("{0:C2}", totalMonto); 
+                TxtTotal.Text = string.Format("{0:C2}", totalMonto);
             }
         }
 
@@ -158,7 +158,7 @@ namespace PE_2023_3MelanyRodriguez.Formularios
             foreach (DataRow fila in ListaProductos.Rows)
             {
                 VentaProducto nuevaventa = new VentaProducto();
-                
+
                 nuevaventa.MiProducto.IDProducto = Convert.ToInt32(fila["ProductoProductoID"]);
                 nuevaventa.cantidad = Convert.ToDecimal(fila["Cantidad"]);
                 nuevaventa.PrecioUnitario = Convert.ToDecimal(fila["PrecioUnitario"]);
@@ -176,28 +176,28 @@ namespace PE_2023_3MelanyRodriguez.Formularios
         {
             bool R = false;
             if (!string.IsNullOrEmpty(TxtNombreProovedor.Text.Trim()) &&
-                CboxVentaTipo.SelectedIndex>=0 &&
-                ListaProductos.Rows.Count>0)
+                CboxVentaTipo.SelectedIndex >= 0 &&
+                ListaProductos.Rows.Count > 0)
             {
                 R = true;
             }
             else
             {
-              if (string.IsNullOrEmpty(TxtNombreProovedor.Text.Trim()))
+                if (string.IsNullOrEmpty(TxtNombreProovedor.Text.Trim()))
                 {
                     MessageBox.Show("Se debe seleccionar un proovedor", "Error en la validacion", MessageBoxButtons.OK);
                     return false;
                 }
 
 
-                if (CboxVentaTipo.SelectedIndex==-1)
+                if (CboxVentaTipo.SelectedIndex == -1)
                 {
                     MessageBox.Show("Se debe seleccionar un tipo de venta", "Error en la validacion", MessageBoxButtons.OK);
                     return false;
                 }
 
 
-                if (ListaProductos.Rows.Count== 0)
+                if (ListaProductos.Rows.Count == 0)
                 {
                     MessageBox.Show("Debe haber almenos una fila en el detalle", "Error en la validacion", MessageBoxButtons.OK);
                     return false;
@@ -206,5 +206,6 @@ namespace PE_2023_3MelanyRodriguez.Formularios
 
             return R;
         }
+
     }
 }

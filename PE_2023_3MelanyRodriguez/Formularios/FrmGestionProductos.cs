@@ -325,7 +325,7 @@ namespace PE_2023_3MelanyRodriguez.Formularios
                 {
                     //DESACTIVAR PRODUCTO
 
-                    DialogResult r = MessageBox.Show("¿Esta seguro de elimianr el Producto?",
+                    DialogResult r = MessageBox.Show("¿Esta seguro de eliminar el Producto?",
                                                        "???",
                                                        MessageBoxButtons.YesNo,
                                                        MessageBoxIcon.Question);

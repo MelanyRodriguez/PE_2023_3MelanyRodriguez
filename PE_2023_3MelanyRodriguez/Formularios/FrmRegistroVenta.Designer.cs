@@ -46,8 +46,6 @@
             this.CPrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnProductoAgregar = new System.Windows.Forms.ToolStripButton();
-            this.BtnProductoEditar = new System.Windows.Forms.ToolStripButton();
-            this.BtnProductoEliminar = new System.Windows.Forms.ToolStripButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.BtnCrearVenta = new System.Windows.Forms.Button();
             this.TxtTotal = new System.Windows.Forms.TextBox();
@@ -75,7 +73,7 @@
             this.groupBox1.Size = new System.Drawing.Size(597, 154);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "º";
+            this.groupBox1.Text = "Encabezado ";
             // 
             // TxtNumeroVenta
             // 
@@ -217,9 +215,7 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BtnProductoAgregar,
-            this.BtnProductoEditar,
-            this.BtnProductoEliminar});
+            this.BtnProductoAgregar});
             this.toolStrip1.Location = new System.Drawing.Point(3, 16);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(591, 27);
@@ -236,26 +232,6 @@
             this.BtnProductoAgregar.Size = new System.Drawing.Size(147, 24);
             this.BtnProductoAgregar.Text = "Agregar Producto";
             this.BtnProductoAgregar.Click += new System.EventHandler(this.BtnProductoAgregar_Click);
-            // 
-            // BtnProductoEditar
-            // 
-            this.BtnProductoEditar.BackColor = System.Drawing.Color.Pink;
-            this.BtnProductoEditar.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnProductoEditar.Image = ((System.Drawing.Image)(resources.GetObject("BtnProductoEditar.Image")));
-            this.BtnProductoEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnProductoEditar.Name = "BtnProductoEditar";
-            this.BtnProductoEditar.Size = new System.Drawing.Size(157, 24);
-            this.BtnProductoEditar.Text = "Modificar Producto";
-            // 
-            // BtnProductoEliminar
-            // 
-            this.BtnProductoEliminar.BackColor = System.Drawing.Color.Violet;
-            this.BtnProductoEliminar.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnProductoEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnProductoEliminar.Image")));
-            this.BtnProductoEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnProductoEliminar.Name = "BtnProductoEliminar";
-            this.BtnProductoEliminar.Size = new System.Drawing.Size(147, 24);
-            this.BtnProductoEliminar.Text = "Eliminar Producto";
             // 
             // groupBox3
             // 
@@ -364,8 +340,6 @@
         private System.Windows.Forms.TextBox TxtNumeroVenta;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnProductoAgregar;
-        private System.Windows.Forms.ToolStripButton BtnProductoEditar;
-        private System.Windows.Forms.ToolStripButton BtnProductoEliminar;
         private System.Windows.Forms.DataGridView DgLista;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label4;
