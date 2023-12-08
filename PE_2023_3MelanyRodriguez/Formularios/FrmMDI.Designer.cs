@@ -245,7 +245,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.MnuPrincipal;
             this.Name = "FrmMDI";
-            this.Text = "SISTEMA DE VENTAS DE PRODUCTOS PARA LA DISTRIBUIDORA DE DON BOSCO";
+            this.Text = "SISTEMA DE GESTION DE INFORMACION Y VENTAS PARA LA DISTRIBUIDORA DE DON BOSCO";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMDI_FormClosed);
             this.Load += new System.EventHandler(this.FrmMDI_Load);
